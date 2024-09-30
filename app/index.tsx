@@ -30,7 +30,8 @@ export default function index() {
             </View>
             <View>
               <CustomButton
-                onPress={() => router.push("/nature-meditation")}
+                // onPress={() => router.push("/nature-meditation")}
+                onPress={() => router.push("/(home)")}
                 title='Commencer'
               />
             </View>

@@ -9,7 +9,7 @@ const AppGradient = ({
   colors: string[]
 }) => {
   return (
-    <LinearGradient className='flex-1' colors={colors}>
+    <LinearGradient className='flex-1 w-full' colors={colors}>
       <Content>{children}</Content>
     </LinearGradient>
   )

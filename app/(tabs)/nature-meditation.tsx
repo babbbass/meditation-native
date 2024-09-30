@@ -12,14 +12,17 @@ import { StatusBar } from "expo-status-bar"
 import { MEDITATION_DATA } from "@/constants/MeditationData"
 import MEDITATION_IMAGES from "@/constants/meditation-images"
 import { LinearGradient } from "expo-linear-gradient"
+import { useUser } from "@clerk/clerk-expo"
 import { router } from "expo-router"
 export default function NatureMeditation() {
+  const { user } = useUser()
+
   return (
     <View className='flex-1'>
       <AppGradient colors={["#161b2e", "#0a4d4a", "#766e67"]}>
         <View className='mb-6'>
-          <Text className='text-gray-200 mb-3 font-bold text-4xl text-left'>
-            Welcome Seb
+          <Text className='italic text-gray-200 mb-3 font-bold text-4xl text-left'>
+            Bonjour {user?.username}
           </Text>
           <Text className='text-indigo-100 text-xl text-left'>
             Commences ta meditation journalière
